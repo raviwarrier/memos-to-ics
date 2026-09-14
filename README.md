@@ -21,5 +21,5 @@ Memos is used as a daily diary. This bridge allows entries to be displayed along
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/memos-to-ical-bridge.git](https://github.com/YOUR_USERNAME/memos-to-ical-bridge.git)
+   git clone [https://github.com/raviwarrier/memos-to-ics](https://github.com/raviwarrier/memos-to-ics.git)
    cd memos-to-ical-bridge
