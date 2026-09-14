@@ -4,8 +4,8 @@ import requests
 
 # ================= CONFIGURATION =================
 # Cloudflare public endpoint (or container internal name if preferred)
-MEMOS_BASE_URL = "https://m8k9v2x7q1z4.raviwarrier.net"
-MEMOS_API_TOKEN = "memos_pat_aveUGX2SHx06LReqzcp496j56hmsUA5S"
+MEMOS_BASE_URL = "https://memos.yourdomain.com"  # change this to your memos url. I haven't tested it with a non-proxied url, but you can try.
+MEMOS_API_TOKEN = "YOUR_MEMOS_API_TOKEN" # get your API from memos app and paste it here
 # =================================================
 
 app = Flask(__name__)
