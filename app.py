@@ -5,7 +5,7 @@ import requests
 # ================= CONFIGURATION =================
 # Cloudflare public endpoint (or container internal name if preferred)
 MEMOS_BASE_URL = "http://memos:5230"  # Your Memos instance URL
-MEMOS_API_TOKEN = "your_memos_pat_here"  # Your Personal Access Token
+MEMOS_API_TOKEN = "your_memos_pat_here"  # Your Personal Access Token. Get it from Settings > Access Tokens
 # =================================================
 
 app = Flask(__name__)
