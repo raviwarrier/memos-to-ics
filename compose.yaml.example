@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: memo-to-ics
     ports:
-      - "127.0.0.1:5321:5321"
+      - "5321:5321"
     restart: unless-stopped
     networks:
       - apps_default
