@@ -6,14 +6,13 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install dependencies using pinned wheels
 COPY requirements.txt .
-RUN pip install --no-cache-dir --only-binary :all: -r requirements.txt
 
-# Security Best Practice: Create a dedicated non-root user to run the app.
-# Works out of the box for all environments — no configuration required.
-RUN useradd -u 10001 -m appuser && \
+# Install dependencies and create dedicated non-root user in a single layer
+RUN pip install --no-cache-dir --only-binary :all: -r requirements.txt && \
+    useradd -u 10001 -m appuser && \
     chown -R appuser:appuser /app
+
 USER appuser
 
 COPY app.py .
