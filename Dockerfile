@@ -8,7 +8,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-# Install dependencies and create dedicated non-root user in a single layer
+# Install dependencies with locked versions and create dedicated non-root user
 RUN pip install --no-cache-dir --only-binary :all: -r requirements.txt && \
     useradd -u 10001 -m appuser && \
     chown -R appuser:appuser /app
