@@ -1,14 +1,13 @@
 services:
   memo-to-ics:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: local/memo-to-ics:latest
+    pull_policy: never
     container_name: memo-to-ics
     ports:
       - "5321:5321"
     restart: unless-stopped
     networks:
-      - apps_default
+      apps_default:
 
 networks:
   apps_default:
